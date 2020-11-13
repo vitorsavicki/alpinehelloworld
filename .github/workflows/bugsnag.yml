@@ -14,3 +14,4 @@ jobs:
       env:
         BUGSNAG_API_KEY: ${{ secrets.BUGSNAG_API_KEY }}
         AUTO_ASSIGN_RELEASE: true  
+        RELEASE_STAGE: ${{ github.ref }}
