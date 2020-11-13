@@ -13,3 +13,4 @@ jobs:
       uses: sazap10/bugsnag-builds-action@master
       env:
         BUGSNAG_API_KEY: ${{ secrets.BUGSNAG_API_KEY }}
+        AUTO_ASSIGN_RELEASE: true  
