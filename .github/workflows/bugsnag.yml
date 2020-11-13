@@ -9,9 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Example of consumption of the output
+      uses: abatilo/release-info-action@v1.3.0
+      with:
+          owner: abatilo
+          repo: release-info-action
+      env:
+          LATEST: ${{ steps.latest_version.outputs.latest_tag }}
+          LATEST_DATE: ${{ steps.latest_version.outputs.latest_tag_published_at }}
     - name: Report build to bugsnag
       uses: sazap10/bugsnag-builds-action@master
       env:
         BUGSNAG_API_KEY: ${{ secrets.BUGSNAG_API_KEY }}
-        AUTO_ASSIGN_RELEASE: true  
-        RELEASE_STAGE: ${{ GITHUB_BASE_REF }}
+        RELEASE_STAGE: ${{ LATEST_LATEST_DATE }}
