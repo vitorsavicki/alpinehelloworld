@@ -12,7 +12,7 @@ bugsnag.configure(
 
 @app.route('/')
 def hello():
-    bugsnag.notify(Exception('Test error'))
+    bugsnag.notify(Exception('Test error !'))
     return 'Hello world!'
 
 if __name__ == '__main__':
