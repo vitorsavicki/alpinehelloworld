@@ -21,4 +21,4 @@ jobs:
       uses: sazap10/bugsnag-builds-action@master
       env:
         BUGSNAG_API_KEY: ${{ secrets.BUGSNAG_API_KEY }}
-        RELEASE_STAGE: ${{ steps.latest_version.outputs.latest_tag steps.latest_version.outputs.latest_tag_published_at}}
+        RELEASE_STAGE: ${{ $LATEST $LATEST_DATE }}
